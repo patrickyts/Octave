@@ -1,0 +1,78 @@
+A = [1 2; 3 4; 5 6]
+the matrix A will be like that
+A = 
+1 2
+3 4
+5 6
+
+% the CLI system control
+pwd % display your current path
+
+cd 'your_path' % access to your_path
+
+load(your_file) % load your file into Octave
+
+who % display various of variable
+whos % display the details of variable such as name, matrix size, byte , class
+
+clear % delete all variables
+clear the_variable_name % delete the specific variable
+
+% The matrix accessment
+size(A) % this command will display the numbers of row and col into the row vector
+        % the result should be like that 3 2
+        
+size(A,1) % the number of the row of the matrix A
+size(A,2) % the number of the col of the matrix A
+
+length(A) % the longest dimension of the matrix A
+          % the result should be 3
+
+%suppose you have the variable B which is declared
+B = A(1:6) % it means take the element start form 1 to 6( A(start,end) )
+           % the order is from col1 to coln
+the result will be
+B = 
+1 3 5 2 4 6
+
+A(1,:) % the ':' means the every element. In this case mean that all elements in all col which the row is 1
+the result
+1 2
+
+% concate with 2 matrixs
+There are the matrix C and A
+C =              A =
+11 12            1 2
+13 14            3 4
+15 16            5 6
+
+D = [C A] % A will concate in right hand side
+D = 
+11 12 1 2
+13 14 3 4
+15 16 5 6
+
+E = [C;A] % A will concate in the below of C
+E =
+11 12
+13 14
+15 16
+1  2
+3  4
+5  6
+
+E(:) & let all elements display in sigle vector
+     & the order from col1 to col2
+result like 
+11
+13
+15
+1
+3
+5
+12
+14
+16
+2
+4
+6
